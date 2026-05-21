@@ -1,0 +1,7 @@
+
+
+
+select buyer_id from product join sales 
+on product.product_id = sales.product_id
+group by buyer_id
+having sum(product_name='S8')>0 and sum(product_name='IPHONE')=0
